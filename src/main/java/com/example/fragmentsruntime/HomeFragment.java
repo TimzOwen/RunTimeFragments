@@ -38,7 +38,9 @@ public class HomeFragment extends Fragment {
             public void onClick(View v)
             {
                 //declare the Fragment Manager from the mainActivity
-                MainActivity.fragmentManager.beginTransaction().replace(R.id.frameLayout, new SportsFragment(),null).commit();
+                MainActivity.fragmentManager.beginTransaction().replace(R.id.frameLayout, new SportsFragment(),null)
+                     //allows user t go back to the prervious fragment
+                     .addToBackStack(null).commit();
 
             }
         });
