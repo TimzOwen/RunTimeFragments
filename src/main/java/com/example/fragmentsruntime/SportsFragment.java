@@ -36,7 +36,9 @@ public class SportsFragment extends Fragment {
             public void onClick(View v)
             {
                 //create the fragment manager here and call the other transactions
-                MainActivity.fragmentManager.beginTransaction().replace(R.id.frameLayout, new GithubFragment(), null).commit();
+                MainActivity.fragmentManager.beginTransaction().replace(R.id.frameLayout, new GithubFragment(), null)
+                    //add the toback to allow user to switch back to the former fragment
+                    .addToBackStack(null).commit();
             }
         });
 
